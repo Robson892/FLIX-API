@@ -42,3 +42,9 @@ class MovieStatsSerializer(serializers.Serializer):
     movies_by_genre = serializers.ListField()
     total_movies = serializers.IntegerField()
     average_stars = serializers.FloatField()
+
+
+class MovieListDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        mode = Movie
+        fields = ' __all__'
